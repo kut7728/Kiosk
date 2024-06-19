@@ -86,9 +86,9 @@ body {
   width: 402px;
   background-color: #322d2d;
 }
-.banner-container:hover > .column-center {
-  transform: scaleX(1.5);
-}
+/* .banner-container:hover > .column-center { */
+/* transform: scaleX(1.5); */
+/* } */
 
 .banner-img {
   width: 339px;
