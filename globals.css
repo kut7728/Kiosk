@@ -12,11 +12,26 @@
 
 body {
   width: 1080px;
+  height: 1920px;
+  /* border: 1px solid rgb(0, 0, 0, 0.1); */
 }
 
 /* .header {
     background-image: url('/images/logo.svg');
 } */
+
+/* .figma { */
+/* justify-content: right; */
+/* margin-left: 50%;
+  margin-bottom: 40px; */
+/* } */
+
+.figma img {
+  /* width: 100px; */
+  /* height: 100px; */
+  margin-left: 600px;
+  margin-bottom: 30px;
+}
 
 .igm1 {
   width: 1080px;
@@ -29,6 +44,9 @@ body {
   display: flex;
   width: 100%;
   height: 92px;
+  border-top: 1px solid rgb(0, 0, 0, 0.1);
+  /* border-right: 1px solid rgb(0, 0, 0, 0.1); */
+  /* border-left: 1px solid rgb(0, 0, 0, 0.1); */
 }
 
 .menu a {
@@ -41,32 +59,96 @@ body {
   font-size: 20px;
   text-decoration: none;
   color: black;
-  border: 1px solid rgb(0, 0, 0, 0.1);
+  /* border: 1px solid rgb(0, 0, 0, 0.1); */
   text-align: center;
   align-items: center;
   justify-content: center;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background-color: #393939;
+  color: white;
 }
 
 .menu-second {
   display: flex;
   width: 100%;
+  height: 100px;
+}
+
+.menu-second a:hover {
+  background: transparent;
+  box-shadow: inset 90px 0 0 0 var(--btn-bg);
 }
 
 .menu-second a {
   width: 100%;
-  padding-top: 35px;
-  padding-bottom: 30px;
+
+  /* padding-top: 35px;
+  padding-bottom: 30px; */
   font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: black;
   border: 1px solid rgb(0, 0, 0, 0.1);
   text-align: center;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
 }
+
+.menu-second a img {
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.menu-second a slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 0; /* 슬라이드 배경이 이미지 뒤에 위치하도록 설정 */
+  transition: transform 0.3s;
+  transform: translateX(
+    -100%
+  ); /* 초기 상태에서 슬라이드 배경을 왼쪽으로 숨김 */
+}
+
+.menu-second a:hover::before {
+  transform: translateX(0); /* 마우스를 올리면 슬라이드 배경이 나타남 */
+}
+
+.menu-second a:hover img {
+  transform: translateX(
+    150%
+  ); /* 마우스를 올리면 이미지가 오른쪽으로 슬라이드 */
+}
+
+/* .tab1:hover { */
+/* background-color: rgba(245, 171, 139, 0.5); */
+/* border-radius: 70%; */
+/* height: 60px; */
+/* width: 100px; */
+/* display: flex; */
+/* margin-top: auto; */
+/* margin-bottom: auto; */
+/* border: 1px solid rgba(245, 171, 139, 0.5); */
+/* box-shadow: 0 0 20px 10px #f5ab8b; */
+/* outline: none; */
+/* filter: blur(50px); */
+/* } */
 
 .homeimg {
   width: 100%;
   height: 100%;
-  
+
   display: flex;
   background-image: url(./images/HomeTab.png);
   background-size: cover;
@@ -87,22 +169,25 @@ body {
 }
 
 .paddingleft {
-  padding-top: 22px;
-  padding-left: 33px;
+  padding-top: 44px;
+  padding-left: 44px;
 }
 
 .paddingleft h1 {
   font-size: 24px;
+  padding-top: 20px;
 }
 
 video {
-  height: 800px;
+  height: 944px;
+  width: 416px;
+  object-fit: cover;
 }
 
 .bg-text {
-  width: 630px;
-  height: 307px;
-  margin-left: 1px;
+  width: 664px;
+  height: 355px;
+  /* margin-left: 1px; */
   background-size: 100%;
   background-image: url(./images/back.jpg);
   flex-direction: column;
@@ -116,6 +201,7 @@ video {
   color: white;
   padding-left: 66px;
   padding-top: 53px;
+  font-size: 30px;
 }
 
 .bg-text span {
@@ -124,7 +210,8 @@ video {
   font-style: normal;
   color: white;
   margin-top: 20px;
-  margin-left: 100px;
+  margin-left: 70px;
+  letter-spacing: 1px;
 }
 
 .bg-text button {
@@ -141,20 +228,34 @@ video {
   margin-top: 55px;
   margin-left: 350px;
   cursor: pointer;
+  transition: 0.5s;
+}
+
+.bg-text button:hover {
+  background-color: white;
+  color: black;
+  opacity: 0.8;
 }
 
 .paddingleft h1 {
   font-family: "NanumSquareNeo";
   font-weight: bolder;
   margin-bottom: 40px;
+  font-size: 30px;
 }
 
 .paddingleft span {
-  line-height: 25px;
+  line-height: 35px;
+  font-size: 20px;
+}
+
+.span2 {
+  font-weight: bold;
 }
 
 .margintop {
-  margin-top: 20px;
+  margin-top: 50px;
+  margin-left: 50px;
 }
 
 .mts {
@@ -163,8 +264,8 @@ video {
   font-style: normal;
   width: 263px;
   height: 73px;
-  bottom: 55px;
-  right: 160px;
+  bottom: 90px;
+  right: 120px;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -174,6 +275,12 @@ video {
   background: rgba(71, 71, 71, 0.69);
   cursor: pointer;
   text-decoration: none;
+  transition: 0.5s;
+}
+
+.mts:hover {
+  background-color: black;
+  opacity: 0.8;
 }
 
 .mts1 {
@@ -193,6 +300,13 @@ video {
   background: rgba(71, 71, 71, 0);
   cursor: pointer;
   text-decoration: none;
+  transition: 0.5s;
+}
+
+.mts1:hover {
+  background-color: black;
+  /* color: black; */
+  opacity: 0.8;
 }
 
 .relative {
@@ -237,6 +351,7 @@ button {
 .slide .slide-item {
   position: relative;
   width: 100%;
+  height: 655px;
   transition: transform 0.15s;
 }
 
@@ -255,8 +370,8 @@ button {
 }
 
 .slide .next {
-  margin-top: 10px;
-  right: 30px;
+  margin-top: 45px;
+  right: 0px;
 }
 
 .slide .pagination {
@@ -264,7 +379,7 @@ button {
   gap: 10px;
   position: absolute;
   left: 50%;
-  bottom: 50px;
+  bottom: 30px;
   transform: translateX(-50%);
   z-index: 10;
 }
@@ -279,5 +394,5 @@ button {
 }
 
 .slide .pagination button.active {
-  background: #f5ab8b;
+  background: black;
 }
