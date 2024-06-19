@@ -101,8 +101,10 @@ body {
 }
 
 .div-12 {
-  align-self: center;
-  margin-top: 26px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
   font: 24px/67% Roboto, sans-serif;
 }
 
@@ -200,6 +202,11 @@ body {
   line-height: normal;
   width: 21%;
   /* margin-left: 20px; */
+}
+
+.detail-button: :hover{
+  background-color
+  
 }
 
 
