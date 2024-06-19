@@ -148,11 +148,11 @@ body {
 }
 
 .lineup-exp-frame {
-  position: relative;
+  position: absolute;
   background-color: rgba(0, 0, 0, 0.3);
-  margin-top: 456px;
+  bottom: 0px;
   width: 100%;
-  padding: 25px 20px;
+  padding: 20px;
 }
 
 .div-18 {
@@ -181,7 +181,7 @@ body {
 }
 
 .div-20 {
-  font: 500 16px Roboto, sans-serif;
+  font: 500 35px Roboto, sans-serif;
 }
 
 .div-21 {
@@ -198,10 +198,9 @@ body {
 .detail-button {
   display: flex;
   background-color: #000;
-  flex-direction: column;
-  line-height: normal;
-  width: 21%;
-  /* margin-left: 20px; */
+  height: 70px;
+  width: 20%;
+  
   transition: all 0.2s ease-in-out;
 }
 
