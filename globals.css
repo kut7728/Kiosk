@@ -77,10 +77,10 @@ body {
   height: 100px;
 }
 
-.menu-second a:hover {
+/* .menu-second a:hover {
   background: transparent;
   box-shadow: inset 90px 0 0 0 var(--btn-bg);
-}
+} */
 
 .menu-second a {
   width: 100%;
@@ -98,15 +98,16 @@ body {
   transition: 0.3s;
   position: relative;
   overflow: hidden;
+  z-index: 0;
 }
 
-.menu-second a img {
+/* .menu-second a img {
   position: relative;
   z-index: 1;
   transition: 0.3s;
-}
+} */
 
-.menu-second a slide::before {
+/* .menu-second a slide::before {
   content: "";
   position: absolute;
   top: 0;
@@ -114,21 +115,33 @@ body {
   width: 100%;
   height: 100%;
   background: black;
-  z-index: 0; /* 슬라이드 배경이 이미지 뒤에 위치하도록 설정 */
+  z-index: 0; 
   transition: transform 0.3s;
   transform: translateX(
     -100%
-  ); /* 초기 상태에서 슬라이드 배경을 왼쪽으로 숨김 */
+  ); 
+} */
+
+.menu-second a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(205, 205, 205);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 0;
 }
 
-.menu-second a:hover::before {
-  transform: translateX(0); /* 마우스를 올리면 슬라이드 배경이 나타남 */
+.tabImg {
+  position: absolute;
+  z-index: 10;
 }
 
-.menu-second a:hover img {
-  transform: translateX(
-    150%
-  ); /* 마우스를 올리면 이미지가 오른쪽으로 슬라이드 */
+.menu-second a:hover:before {
+  transform: translateX(0);
 }
 
 /* .tab1:hover { */
@@ -182,6 +195,7 @@ video {
   height: 944px;
   width: 416px;
   object-fit: cover;
+  outline: none;
 }
 
 .bg-text {
